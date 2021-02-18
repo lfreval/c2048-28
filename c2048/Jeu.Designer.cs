@@ -36,20 +36,24 @@ namespace c2048
             this.Grille = new System.Windows.Forms.TableLayoutPanel();
             this.Case00 = new System.Windows.Forms.Label();
             this.Case10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.Case20 = new System.Windows.Forms.Label();
+            this.Case30 = new System.Windows.Forms.Label();
+            this.Case01 = new System.Windows.Forms.Label();
+            this.Case11 = new System.Windows.Forms.Label();
+            this.Case21 = new System.Windows.Forms.Label();
+            this.Case31 = new System.Windows.Forms.Label();
+            this.Case02 = new System.Windows.Forms.Label();
+            this.Case12 = new System.Windows.Forms.Label();
+            this.Case22 = new System.Windows.Forms.Label();
+            this.Case32 = new System.Windows.Forms.Label();
+            this.Case03 = new System.Windows.Forms.Label();
+            this.Case13 = new System.Windows.Forms.Label();
+            this.Case23 = new System.Windows.Forms.Label();
+            this.Case33 = new System.Windows.Forms.Label();
+            this.TexteScore = new System.Windows.Forms.Label();
+            this.LabelScore = new System.Windows.Forms.Label();
+            this.LabelMouvements = new System.Windows.Forms.Label();
+            this.TexteMouvements = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.Grille.SuspendLayout();
@@ -60,9 +64,9 @@ namespace c2048
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LabelEtat});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 425);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 449);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(335, 42);
+            this.statusStrip1.Size = new System.Drawing.Size(401, 42);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -80,7 +84,7 @@ namespace c2048
             this.nouveauToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(335, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(401, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,23 +101,23 @@ namespace c2048
             this.Grille.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.Grille.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.Grille.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.Grille.Controls.Add(this.label16, 3, 3);
-            this.Grille.Controls.Add(this.label15, 2, 3);
-            this.Grille.Controls.Add(this.label14, 1, 3);
-            this.Grille.Controls.Add(this.label13, 0, 3);
-            this.Grille.Controls.Add(this.label12, 3, 2);
-            this.Grille.Controls.Add(this.label11, 2, 2);
-            this.Grille.Controls.Add(this.label10, 1, 2);
-            this.Grille.Controls.Add(this.label9, 0, 2);
-            this.Grille.Controls.Add(this.label8, 3, 1);
-            this.Grille.Controls.Add(this.label7, 2, 1);
-            this.Grille.Controls.Add(this.label6, 1, 1);
-            this.Grille.Controls.Add(this.label5, 0, 1);
-            this.Grille.Controls.Add(this.label4, 3, 0);
-            this.Grille.Controls.Add(this.label3, 2, 0);
+            this.Grille.Controls.Add(this.Case33, 3, 3);
+            this.Grille.Controls.Add(this.Case23, 2, 3);
+            this.Grille.Controls.Add(this.Case13, 1, 3);
+            this.Grille.Controls.Add(this.Case03, 0, 3);
+            this.Grille.Controls.Add(this.Case32, 3, 2);
+            this.Grille.Controls.Add(this.Case22, 2, 2);
+            this.Grille.Controls.Add(this.Case12, 1, 2);
+            this.Grille.Controls.Add(this.Case02, 0, 2);
+            this.Grille.Controls.Add(this.Case31, 3, 1);
+            this.Grille.Controls.Add(this.Case21, 2, 1);
+            this.Grille.Controls.Add(this.Case11, 1, 1);
+            this.Grille.Controls.Add(this.Case01, 0, 1);
+            this.Grille.Controls.Add(this.Case30, 3, 0);
+            this.Grille.Controls.Add(this.Case20, 2, 0);
             this.Grille.Controls.Add(this.Case10, 1, 0);
             this.Grille.Controls.Add(this.Case00, 0, 0);
-            this.Grille.Location = new System.Drawing.Point(12, 108);
+            this.Grille.Location = new System.Drawing.Point(53, 118);
             this.Grille.Name = "Grille";
             this.Grille.RowCount = 4;
             this.Grille.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -147,179 +151,217 @@ namespace c2048
             this.Case10.TabIndex = 1;
             this.Case10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // Case20
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(152, 2);
-            this.label3.Margin = new System.Windows.Forms.Padding(2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 71);
-            this.label3.TabIndex = 2;
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case20.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case20.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case20.Location = new System.Drawing.Point(152, 2);
+            this.Case20.Margin = new System.Windows.Forms.Padding(2);
+            this.Case20.Name = "Case20";
+            this.Case20.Size = new System.Drawing.Size(71, 71);
+            this.Case20.TabIndex = 2;
+            this.Case20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // Case30
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(227, 2);
-            this.label4.Margin = new System.Windows.Forms.Padding(2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 71);
-            this.label4.TabIndex = 3;
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case30.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case30.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case30.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case30.Location = new System.Drawing.Point(227, 2);
+            this.Case30.Margin = new System.Windows.Forms.Padding(2);
+            this.Case30.Name = "Case30";
+            this.Case30.Size = new System.Drawing.Size(71, 71);
+            this.Case30.TabIndex = 3;
+            this.Case30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // Case01
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 77);
-            this.label5.Margin = new System.Windows.Forms.Padding(2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 71);
-            this.label5.TabIndex = 4;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case01.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case01.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case01.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case01.Location = new System.Drawing.Point(2, 77);
+            this.Case01.Margin = new System.Windows.Forms.Padding(2);
+            this.Case01.Name = "Case01";
+            this.Case01.Size = new System.Drawing.Size(71, 71);
+            this.Case01.TabIndex = 4;
+            this.Case01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // Case11
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(77, 77);
-            this.label6.Margin = new System.Windows.Forms.Padding(2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 71);
-            this.label6.TabIndex = 5;
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case11.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case11.Location = new System.Drawing.Point(77, 77);
+            this.Case11.Margin = new System.Windows.Forms.Padding(2);
+            this.Case11.Name = "Case11";
+            this.Case11.Size = new System.Drawing.Size(71, 71);
+            this.Case11.TabIndex = 5;
+            this.Case11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // Case21
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(152, 77);
-            this.label7.Margin = new System.Windows.Forms.Padding(2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 71);
-            this.label7.TabIndex = 6;
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case21.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case21.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case21.Location = new System.Drawing.Point(152, 77);
+            this.Case21.Margin = new System.Windows.Forms.Padding(2);
+            this.Case21.Name = "Case21";
+            this.Case21.Size = new System.Drawing.Size(71, 71);
+            this.Case21.TabIndex = 6;
+            this.Case21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // Case31
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(227, 77);
-            this.label8.Margin = new System.Windows.Forms.Padding(2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 71);
-            this.label8.TabIndex = 7;
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case31.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case31.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case31.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case31.Location = new System.Drawing.Point(227, 77);
+            this.Case31.Margin = new System.Windows.Forms.Padding(2);
+            this.Case31.Name = "Case31";
+            this.Case31.Size = new System.Drawing.Size(71, 71);
+            this.Case31.TabIndex = 7;
+            this.Case31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // Case02
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(2, 152);
-            this.label9.Margin = new System.Windows.Forms.Padding(2);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 71);
-            this.label9.TabIndex = 8;
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case02.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case02.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case02.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case02.Location = new System.Drawing.Point(2, 152);
+            this.Case02.Margin = new System.Windows.Forms.Padding(2);
+            this.Case02.Name = "Case02";
+            this.Case02.Size = new System.Drawing.Size(71, 71);
+            this.Case02.TabIndex = 8;
+            this.Case02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // Case12
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label10.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(77, 152);
-            this.label10.Margin = new System.Windows.Forms.Padding(2);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 71);
-            this.label10.TabIndex = 9;
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case12.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case12.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case12.Location = new System.Drawing.Point(77, 152);
+            this.Case12.Margin = new System.Windows.Forms.Padding(2);
+            this.Case12.Name = "Case12";
+            this.Case12.Size = new System.Drawing.Size(71, 71);
+            this.Case12.TabIndex = 9;
+            this.Case12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // Case22
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(152, 152);
-            this.label11.Margin = new System.Windows.Forms.Padding(2);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 71);
-            this.label11.TabIndex = 10;
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case22.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case22.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case22.Location = new System.Drawing.Point(152, 152);
+            this.Case22.Margin = new System.Windows.Forms.Padding(2);
+            this.Case22.Name = "Case22";
+            this.Case22.Size = new System.Drawing.Size(71, 71);
+            this.Case22.TabIndex = 10;
+            this.Case22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // Case32
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label12.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(227, 152);
-            this.label12.Margin = new System.Windows.Forms.Padding(2);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 71);
-            this.label12.TabIndex = 11;
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case32.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case32.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case32.Location = new System.Drawing.Point(227, 152);
+            this.Case32.Margin = new System.Windows.Forms.Padding(2);
+            this.Case32.Name = "Case32";
+            this.Case32.Size = new System.Drawing.Size(71, 71);
+            this.Case32.TabIndex = 11;
+            this.Case32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // Case03
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label13.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(2, 227);
-            this.label13.Margin = new System.Windows.Forms.Padding(2);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 71);
-            this.label13.TabIndex = 12;
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case03.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case03.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case03.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case03.Location = new System.Drawing.Point(2, 227);
+            this.Case03.Margin = new System.Windows.Forms.Padding(2);
+            this.Case03.Name = "Case03";
+            this.Case03.Size = new System.Drawing.Size(71, 71);
+            this.Case03.TabIndex = 12;
+            this.Case03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // Case13
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label14.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(77, 227);
-            this.label14.Margin = new System.Windows.Forms.Padding(2);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 71);
-            this.label14.TabIndex = 13;
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case13.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case13.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case13.Location = new System.Drawing.Point(77, 227);
+            this.Case13.Margin = new System.Windows.Forms.Padding(2);
+            this.Case13.Name = "Case13";
+            this.Case13.Size = new System.Drawing.Size(71, 71);
+            this.Case13.TabIndex = 13;
+            this.Case13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // Case23
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(152, 227);
-            this.label15.Margin = new System.Windows.Forms.Padding(2);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 71);
-            this.label15.TabIndex = 14;
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case23.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case23.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case23.Location = new System.Drawing.Point(152, 227);
+            this.Case23.Margin = new System.Windows.Forms.Padding(2);
+            this.Case23.Name = "Case23";
+            this.Case23.Size = new System.Drawing.Size(71, 71);
+            this.Case23.TabIndex = 14;
+            this.Case23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // Case33
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label16.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label16.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(227, 227);
-            this.label16.Margin = new System.Windows.Forms.Padding(2);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 71);
-            this.label16.TabIndex = 15;
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Case33.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Case33.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Case33.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case33.Location = new System.Drawing.Point(227, 227);
+            this.Case33.Margin = new System.Windows.Forms.Padding(2);
+            this.Case33.Name = "Case33";
+            this.Case33.Size = new System.Drawing.Size(71, 71);
+            this.Case33.TabIndex = 15;
+            this.Case33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TexteScore
+            // 
+            this.TexteScore.AutoSize = true;
+            this.TexteScore.Location = new System.Drawing.Point(12, 55);
+            this.TexteScore.Name = "TexteScore";
+            this.TexteScore.Size = new System.Drawing.Size(80, 25);
+            this.TexteScore.TabIndex = 3;
+            this.TexteScore.Text = "Score :";
+            // 
+            // LabelScore
+            // 
+            this.LabelScore.AutoSize = true;
+            this.LabelScore.Location = new System.Drawing.Point(98, 55);
+            this.LabelScore.Name = "LabelScore";
+            this.LabelScore.Size = new System.Drawing.Size(0, 25);
+            this.LabelScore.TabIndex = 4;
+            // 
+            // LabelMouvements
+            // 
+            this.LabelMouvements.AutoSize = true;
+            this.LabelMouvements.Location = new System.Drawing.Point(321, 55);
+            this.LabelMouvements.Name = "LabelMouvements";
+            this.LabelMouvements.Size = new System.Drawing.Size(0, 25);
+            this.LabelMouvements.TabIndex = 6;
+            // 
+            // TexteMouvements
+            // 
+            this.TexteMouvements.AutoSize = true;
+            this.TexteMouvements.Location = new System.Drawing.Point(168, 55);
+            this.TexteMouvements.Name = "TexteMouvements";
+            this.TexteMouvements.Size = new System.Drawing.Size(147, 25);
+            this.TexteMouvements.TabIndex = 5;
+            this.TexteMouvements.Text = "Mouvements :";
             // 
             // Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 467);
+            this.ClientSize = new System.Drawing.Size(401, 491);
+            this.Controls.Add(this.LabelMouvements);
+            this.Controls.Add(this.TexteMouvements);
+            this.Controls.Add(this.LabelScore);
+            this.Controls.Add(this.TexteScore);
             this.Controls.Add(this.Grille);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -346,21 +388,25 @@ namespace c2048
         private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel Grille;
         private System.Windows.Forms.Label Case00;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Case33;
+        private System.Windows.Forms.Label Case23;
+        private System.Windows.Forms.Label Case13;
+        private System.Windows.Forms.Label Case03;
+        private System.Windows.Forms.Label Case32;
+        private System.Windows.Forms.Label Case22;
+        private System.Windows.Forms.Label Case12;
+        private System.Windows.Forms.Label Case02;
+        private System.Windows.Forms.Label Case31;
+        private System.Windows.Forms.Label Case21;
+        private System.Windows.Forms.Label Case11;
+        private System.Windows.Forms.Label Case01;
+        private System.Windows.Forms.Label Case30;
+        private System.Windows.Forms.Label Case20;
         private System.Windows.Forms.Label Case10;
+        private System.Windows.Forms.Label TexteScore;
+        private System.Windows.Forms.Label LabelScore;
+        private System.Windows.Forms.Label LabelMouvements;
+        private System.Windows.Forms.Label TexteMouvements;
     }
 }
 
