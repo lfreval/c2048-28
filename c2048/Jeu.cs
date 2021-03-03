@@ -39,16 +39,43 @@ namespace c2048
         {
             MessageEtat("Nouveau Jeu");
             LabelMouvements.Text = _mouvements.ToString();
-            _case[2, 0] = 4;
-            Affiche(2, 0);
+            _case[1, 1] = 2;
+            _case[2, 3] = 4;
+            _case[3, 2] = 2;
+            Affiche();
+        }
+
+        private void Affiche()
+        {
+            for (int i = 0; i < 4; i += 1)
+            {
+                for (int j = 0; j < 4; j += 1)
+                { 
+                    Affiche(i, j);
+                }
+            }
+        }
+
+        private void AfficheTest()
+        {
+            double puissance = 0;
+            for (int i = 0; i < 4; i += 1)
+            {
+                for (int j = 0; j < 4; j += 1)
+                {
+                    _case[i, j] = (int) Math.Pow(2, puissance += 1);
+                    Affiche(i, j);
+                }
+            }
         }
 
         private void Affiche(int x, int y)
         {
-            Case20.Text = _case[2, 0].ToString();
-            var coul = Outils.Couleurs(_case[2, 0]);
-            Case20.BackColor = coul["fond"];
-            Case20.ForeColor = coul["fonte"];
+            var ctrl = Grille.Controls.Find($"Case{x}{y}", true)[0];
+            ctrl.Text = _case[x, y].ToString();
+            var coul = Outils.Couleurs(_case[x, y]);
+            ctrl.BackColor = coul["fond"];
+            ctrl.ForeColor = coul["fonte"];
         }
 
         private void MessageEtat(string message)

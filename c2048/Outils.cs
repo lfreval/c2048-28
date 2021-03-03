@@ -16,6 +16,10 @@ namespace c2048
 
             switch (valeur)
             {
+                case 0:
+                    couleurFond = Color.LightSteelBlue;
+                    couleurFonte = couleurFond;
+                    break;
                 case 2:
                     couleurFond = Color.AntiqueWhite;
                     break;
