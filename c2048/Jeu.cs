@@ -14,6 +14,8 @@ namespace c2048
     {
         private int _mouvements = 0;
 
+        private int[,] _case = new int[4, 4];
+
         public enum Sens
         {
             Haut,
@@ -37,6 +39,16 @@ namespace c2048
         {
             MessageEtat("Nouveau Jeu");
             LabelMouvements.Text = _mouvements.ToString();
+            _case[2, 0] = 4;
+            Affiche(2, 0);
+        }
+
+        private void Affiche(int x, int y)
+        {
+            Case20.Text = _case[2, 0].ToString();
+            var coul = Outils.Couleurs(_case[2, 0]);
+            Case20.BackColor = coul["fond"];
+            Case20.ForeColor = coul["fonte"];
         }
 
         private void MessageEtat(string message)
@@ -69,7 +81,7 @@ namespace c2048
 
         private void Jeu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = MessageBox.Show($"Fermeture de l'application pour {e.CloseReason}. Voulez-vous quitter ?", "Fermeture", MessageBoxButtons.YesNo) == DialogResult.No;
+            e.Cancel = MessageBox.Show(String.Format("Fermeture de l'application pour {0}. Voulez-vous {1} ?", e.CloseReason, "quitter"), "Fermeture", MessageBoxButtons.YesNo) == DialogResult.No;
         }
     }
 }

@@ -85,14 +85,14 @@ namespace c2048
             this.nouveauToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(401, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(401, 48);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nouveauToolStripMenuItem
             // 
             this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(132, 38);
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(132, 40);
             this.nouveauToolStripMenuItem.Text = "&Nouveau";
             this.nouveauToolStripMenuItem.Click += new System.EventHandler(this.nouveauToolStripMenuItem_Click);
             // 
@@ -133,7 +133,7 @@ namespace c2048
             // 
             this.Case33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case33.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case33.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case33.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case33.Location = new System.Drawing.Point(227, 227);
             this.Case33.Margin = new System.Windows.Forms.Padding(2);
             this.Case33.Name = "Case33";
@@ -145,7 +145,7 @@ namespace c2048
             // 
             this.Case23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case23.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case23.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case23.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case23.Location = new System.Drawing.Point(152, 227);
             this.Case23.Margin = new System.Windows.Forms.Padding(2);
             this.Case23.Name = "Case23";
@@ -157,7 +157,7 @@ namespace c2048
             // 
             this.Case13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case13.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case13.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case13.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case13.Location = new System.Drawing.Point(77, 227);
             this.Case13.Margin = new System.Windows.Forms.Padding(2);
             this.Case13.Name = "Case13";
@@ -169,7 +169,7 @@ namespace c2048
             // 
             this.Case03.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case03.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case03.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case03.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case03.Location = new System.Drawing.Point(2, 227);
             this.Case03.Margin = new System.Windows.Forms.Padding(2);
             this.Case03.Name = "Case03";
@@ -181,7 +181,7 @@ namespace c2048
             // 
             this.Case32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case32.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case32.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case32.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case32.Location = new System.Drawing.Point(227, 152);
             this.Case32.Margin = new System.Windows.Forms.Padding(2);
             this.Case32.Name = "Case32";
@@ -193,7 +193,7 @@ namespace c2048
             // 
             this.Case22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case22.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case22.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case22.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case22.Location = new System.Drawing.Point(152, 152);
             this.Case22.Margin = new System.Windows.Forms.Padding(2);
             this.Case22.Name = "Case22";
@@ -205,7 +205,7 @@ namespace c2048
             // 
             this.Case12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case12.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case12.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case12.Location = new System.Drawing.Point(77, 152);
             this.Case12.Margin = new System.Windows.Forms.Padding(2);
             this.Case12.Name = "Case12";
@@ -217,7 +217,7 @@ namespace c2048
             // 
             this.Case02.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case02.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case02.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case02.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case02.Location = new System.Drawing.Point(2, 152);
             this.Case02.Margin = new System.Windows.Forms.Padding(2);
             this.Case02.Name = "Case02";
@@ -229,7 +229,7 @@ namespace c2048
             // 
             this.Case31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case31.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case31.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case31.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case31.Location = new System.Drawing.Point(227, 77);
             this.Case31.Margin = new System.Windows.Forms.Padding(2);
             this.Case31.Name = "Case31";
@@ -241,7 +241,7 @@ namespace c2048
             // 
             this.Case21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case21.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case21.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case21.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case21.Location = new System.Drawing.Point(152, 77);
             this.Case21.Margin = new System.Windows.Forms.Padding(2);
             this.Case21.Name = "Case21";
@@ -253,7 +253,7 @@ namespace c2048
             // 
             this.Case11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case11.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case11.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case11.Location = new System.Drawing.Point(77, 77);
             this.Case11.Margin = new System.Windows.Forms.Padding(2);
             this.Case11.Name = "Case11";
@@ -265,7 +265,7 @@ namespace c2048
             // 
             this.Case01.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case01.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case01.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case01.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case01.Location = new System.Drawing.Point(2, 77);
             this.Case01.Margin = new System.Windows.Forms.Padding(2);
             this.Case01.Name = "Case01";
@@ -277,7 +277,7 @@ namespace c2048
             // 
             this.Case30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case30.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case30.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case30.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case30.Location = new System.Drawing.Point(227, 2);
             this.Case30.Margin = new System.Windows.Forms.Padding(2);
             this.Case30.Name = "Case30";
@@ -289,7 +289,8 @@ namespace c2048
             // 
             this.Case20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case20.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case20.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case20.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Case20.Location = new System.Drawing.Point(152, 2);
             this.Case20.Margin = new System.Windows.Forms.Padding(2);
             this.Case20.Name = "Case20";
@@ -301,7 +302,7 @@ namespace c2048
             // 
             this.Case10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case10.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case10.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case10.Location = new System.Drawing.Point(77, 2);
             this.Case10.Margin = new System.Windows.Forms.Padding(2);
             this.Case10.Name = "Case10";
@@ -313,7 +314,7 @@ namespace c2048
             // 
             this.Case00.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case00.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Case00.Font = new System.Drawing.Font("Arial Narrow", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Case00.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Case00.Location = new System.Drawing.Point(2, 2);
             this.Case00.Margin = new System.Windows.Forms.Padding(2);
             this.Case00.Name = "Case00";
