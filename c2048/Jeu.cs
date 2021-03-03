@@ -45,6 +45,7 @@ namespace c2048
             Affiche();
         }
 
+        
         private void Affiche()
         {
             for (int i = 0; i < 4; i += 1)
@@ -83,14 +84,90 @@ namespace c2048
             LabelEtat.Text = message;
         }
 
+        private bool Bouge(Sens direction)
+        {
+            bool changement = false;
+
+            switch (direction)
+            {
+                case Sens.Droite:
+                    // pour chaque ligne
+                    for (int j = 0; j < 4; j += 1)
+                    {
+                        // pour chaque colonne
+                        for (int i = 2; i >= 0; i -= 1)
+                        {
+                            if ((_case[i + 1, j] == 0) && (_case[i, j] != 0))
+                            {
+                                _case[i + 1, j] = _case[i, j];
+                                _case[i, j] = 0;
+                                changement = true;
+                            }
+                        }
+                    }
+                    break;
+                case Sens.Gauche:
+                    // pour chaque ligne
+                    for (int j = 0; j < 4; j += 1)
+                    {
+                        // pour chaque colonne
+                        for (int i = 1; i < 4; i += 1)
+                        {
+                            if ((_case[i - 1, j] == 0) && (_case[i, j] != 0))
+                            {
+                                _case[i - 1, j] = _case[i, j];
+                                _case[i, j] = 0;
+                                changement = true;
+                            }
+                        }
+                    }
+                    break;
+                case Sens.Bas:
+                    // pour chaque colonne
+                    for (int i = 0; i < 4; i += 1)
+                    {
+                        // pour chaque ligne
+                        for (int j = 2; j >= 0; j -= 1)
+                        {
+                            if ((_case[i, j + 1] == 0) && (_case[i, j] != 0))
+                            {
+                                _case[i, j + 1] = _case[i, j];
+                                _case[i, j] = 0;
+                                changement = true;
+                            }
+                        }
+                    }
+                    break;
+                case Sens.Haut:
+                    // pour chaque colonne
+                    for (int i = 0; i < 4; i += 1)
+                    {
+                        // pour chaque ligne
+                        for (int j = 1; j < 4; j += 1)
+                        {
+                            if ((_case[i, j - 1] == 0) && (_case[i, j] != 0))
+                            {
+                                _case[i, j - 1] = _case[i, j];
+                                _case[i, j] = 0;
+                                changement = true;
+                            }
+                        }
+                    }
+                    break;
+            }
+
+            return changement;
+        }
+
         private void Jeu_KeyDown(object sender, KeyEventArgs e)
         {
             Sens touche = Direction(e);
             MessageEtat($"Touche {touche}");
-            if (touche != Sens.Autre)
+            if (Bouge(touche))
             {
                 _mouvements += 1;
                 LabelMouvements.Text = _mouvements.ToString();
+                Affiche();
             }
         }
 
