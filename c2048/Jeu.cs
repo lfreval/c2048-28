@@ -57,7 +57,8 @@ namespace c2048
             /* _case[1, 1] = 2;
             _case[2, 3] = 4;
             _case[3, 2] = 2; */
-            _case = Tests.TestP9();
+            // _case = Tests.TestP9();
+            AjouteValeur();
             Affiche();
         }
 
@@ -298,6 +299,12 @@ namespace c2048
             return (changement, points);
         }
 
+        private void AjouteValeur()
+        {
+            (int x, int y, int v) = Outils.DeuxOuQuatre(_case);
+            _case[x, y] = v;
+        }
+
         private void Jeu_KeyDown(object sender, KeyEventArgs e)
         {
             Sens touche = Direction(e);
@@ -307,6 +314,7 @@ namespace c2048
             {
                 _score += points;
                 _mouvements += 1;
+                AjouteValeur();
                 Affiche();
             }
         }

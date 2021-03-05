@@ -48,5 +48,31 @@ namespace c2048
             };
             return couleur;
         }
+
+        public static (int, int, int) DeuxOuQuatre(int[,] plateau)
+        {
+            const float PROBA2 = 0.9F;
+            // colonne
+            int x;
+            // ligne
+            int y;
+            // valeur 2 par défaut
+            int v = 2;
+            // randomizer
+            Random rnd = new Random();
+
+            do
+            {
+                // crée un nombre entre 0 et 3
+                x = rnd.Next(0, 4);
+                y = rnd.Next(0, 4);
+            } while (plateau[x, y] != 0);
+
+            if (rnd.NextDouble() >= PROBA2)
+            {
+                v = 4;
+            }
+            return (x, y, v);
+        }
     }
 }
