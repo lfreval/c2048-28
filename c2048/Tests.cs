@@ -11,6 +11,8 @@ namespace c2048
         public static int[,] TestP9()
         {
             int[,] table = new int[4, 4];
+            table[0, 0] = 16;
+            table[3, 2] = 8;
             table[0, 3] = 2;
             table[1, 3] = 2;
             table[2, 3] = 4;

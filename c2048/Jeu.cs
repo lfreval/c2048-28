@@ -169,12 +169,31 @@ namespace c2048
                                 int liberte = i;
                                 do
                                 {
-                                    if (_case[k - 1, j] == 0) { liberte = k - 1; }
+                                    if (
+                                        (_case[k - 1, j] == 0)
+                                        || (
+                                                !fusion[k - 1, j]
+                                                && (_case[k - 1, j] == _case[i, j]
+                                                )
+                                           )
+                                      )
+                                    {
+                                        liberte = k - 1;
+                                    }
                                     k -= 1;
                                 } while ((k > 0) && (_case[k, j] == 0));
                                 if (liberte != i)
                                 {
-                                    _case[liberte, j] = _case[i, j];
+                                    if (_case[liberte, j] == 0)
+                                    {
+                                        _case[liberte, j] = _case[i, j];
+                                    }
+                                    else
+                                    {
+                                        _case[liberte, j] *= 2;
+                                        points += _case[liberte, j];
+                                        fusion[liberte, j] = true;
+                                    }
                                     _case[i, j] = 0;
                                     changement = true;
                                 }
@@ -196,12 +215,31 @@ namespace c2048
                                 int liberte = j;
                                 do
                                 {
-                                    if (_case[i, k + 1] == 0) { liberte = k + 1; }
+                                    if (
+                                        (_case[i, k + 1] == 0)
+                                        || (
+                                                !fusion[i, k + 1]
+                                                && (_case[i, k + 1] == _case[i, j]
+                                                )
+                                           )
+                                      )
+                                    {
+                                        liberte = k + 1;
+                                    }
                                     k += 1;
                                 } while ((k < 3) && (_case[i, k] == 0));
-                                if (liberte != j)
+                                if (liberte != i)
                                 {
-                                    _case[i, liberte] = _case[i, j];
+                                    if (_case[i, liberte] == 0)
+                                    {
+                                        _case[i, liberte] = _case[i, j];
+                                    }
+                                    else
+                                    {
+                                        _case[i, liberte] *= 2;
+                                        points += _case[i, liberte];
+                                        fusion[i, liberte] = true;
+                                    }
                                     _case[i, j] = 0;
                                     changement = true;
                                 }
@@ -223,12 +261,31 @@ namespace c2048
                                 int liberte = j;
                                 do
                                 {
-                                    if (_case[i, k - 1] == 0) { liberte = k - 1; }
+                                    if (
+                                        (_case[i, k - 1] == 0)
+                                        || (
+                                                !fusion[i, k - 1]
+                                                && (_case[i, k - 1] == _case[i, j]
+                                                )
+                                           )
+                                      )
+                                    {
+                                        liberte = k - 1;
+                                    }
                                     k -= 1;
                                 } while ((k > 0) && (_case[i, k] == 0));
-                                if (liberte != j)
+                                if (liberte != i)
                                 {
-                                    _case[i, liberte] = _case[i, j];
+                                    if (_case[i, liberte] == 0)
+                                    {
+                                        _case[i, liberte] = _case[i, j];
+                                    }
+                                    else
+                                    {
+                                        _case[i, liberte] *= 2;
+                                        points += _case[i, liberte];
+                                        fusion[i, liberte] = true;
+                                    }
                                     _case[i, j] = 0;
                                     changement = true;
                                 }
