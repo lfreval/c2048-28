@@ -54,9 +54,10 @@ namespace c2048
         {
             MessageEtat("Nouveau Jeu");
             Init();
-            _case[1, 1] = 2;
+            /* _case[1, 1] = 2;
             _case[2, 3] = 4;
-            _case[3, 2] = 2;
+            _case[3, 2] = 2; */
+            _case = Tests.TestP9();
             Affiche();
         }
 
@@ -104,6 +105,7 @@ namespace c2048
         private (bool, int) Bouge(Sens direction)
         {
             bool changement = false;
+            bool[,] fusion = new bool[4, 4];
             int points = 0;
 
             switch (direction)
@@ -122,12 +124,30 @@ namespace c2048
                                 int liberte = i;
                                 do
                                 {
-                                    if (_case[k + 1, j] == 0) { liberte = k + 1; }
+                                    if (
+                                        (_case[k + 1, j] == 0)
+                                        || (
+                                                !fusion[k + 1, j] 
+                                                && (_case[k + 1, j] == _case[i, j]
+                                                )
+                                           )
+                                      ) { 
+                                        liberte = k + 1; 
+                                    }
                                     k += 1;
                                 } while ((k < 3) && (_case[k, j] == 0));
                                 if (liberte != i)
                                 {
-                                    _case[liberte, j] = _case[i, j];
+                                    if (_case[liberte, j] == 0)
+                                    {
+                                        _case[liberte, j] = _case[i, j];
+                                    }
+                                    else
+                                    {
+                                        _case[liberte, j] *= 2;
+                                        points += _case[liberte, j];
+                                        fusion[liberte, j] = true;
+                                    }
                                     _case[i, j] = 0;
                                     changement = true;
                                 }
