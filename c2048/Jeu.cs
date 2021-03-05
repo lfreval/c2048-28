@@ -13,6 +13,7 @@ namespace c2048
     public partial class Jeu : Form
     {
         private int _mouvements = 0;
+        private int _score = 0;
 
         private int[,] _case = new int[4, 4];
 
@@ -35,10 +36,24 @@ namespace c2048
             MessageEtat("Version 1.0");
         }
 
+        private void Init()
+        {
+            /* for (int i = 0; i < 4; i += 1)
+            {
+                for (int j = 0; j < 4; j += 1)
+                {
+                    _case[i, j] = 0;
+                }
+            } */
+            _case = new int[4, 4];
+            _mouvements = 0;
+            _score = 0;
+        }
+
         private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageEtat("Nouveau Jeu");
-            LabelMouvements.Text = _mouvements.ToString();
+            Init();
             _case[1, 1] = 2;
             _case[2, 3] = 4;
             _case[3, 2] = 2;
@@ -49,6 +64,7 @@ namespace c2048
         private void Affiche()
         {
             LabelMouvements.Text = _mouvements.ToString();
+            LabelScore.Text = _score.ToString();
             for (int i = 0; i < 4; i += 1)
             {
                 for (int j = 0; j < 4; j += 1)
@@ -85,9 +101,10 @@ namespace c2048
             LabelEtat.Text = message;
         }
 
-        private bool Bouge(Sens direction)
+        private (bool, int) Bouge(Sens direction)
         {
             bool changement = false;
+            int points = 0;
 
             switch (direction)
             {
@@ -201,15 +218,17 @@ namespace c2048
                     break;
             }
 
-            return changement;
+            return (changement, points);
         }
 
         private void Jeu_KeyDown(object sender, KeyEventArgs e)
         {
             Sens touche = Direction(e);
             MessageEtat($"Touche {touche}");
-            if (Bouge(touche))
+            (bool changement, int points) = Bouge(touche);
+            if (changement)
             {
+                _score += points;
                 _mouvements += 1;
                 Affiche();
             }
