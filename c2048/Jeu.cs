@@ -228,7 +228,7 @@ namespace c2048
                                     }
                                     k += 1;
                                 } while ((k < 3) && (_case[i, k] == 0));
-                                if (liberte != i)
+                                if (liberte != j)
                                 {
                                     if (_case[i, liberte] == 0)
                                     {
@@ -274,7 +274,7 @@ namespace c2048
                                     }
                                     k -= 1;
                                 } while ((k > 0) && (_case[i, k] == 0));
-                                if (liberte != i)
+                                if (liberte != j)
                                 {
                                     if (_case[i, liberte] == 0)
                                     {
