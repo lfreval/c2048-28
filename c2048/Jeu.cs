@@ -48,6 +48,7 @@ namespace c2048
         
         private void Affiche()
         {
+            LabelMouvements.Text = _mouvements.ToString();
             for (int i = 0; i < 4; i += 1)
             {
                 for (int j = 0; j < 4; j += 1)
@@ -97,11 +98,22 @@ namespace c2048
                         // pour chaque colonne
                         for (int i = 2; i >= 0; i -= 1)
                         {
-                            if ((_case[i + 1, j] == 0) && (_case[i, j] != 0))
+                            if (_case[i, j] != 0)
                             {
-                                _case[i + 1, j] = _case[i, j];
-                                _case[i, j] = 0;
-                                changement = true;
+                                // avancer tant que c'est possible
+                                int k = i;
+                                int liberte = i;
+                                do
+                                {
+                                    if (_case[k + 1, j] == 0) { liberte = k + 1; }
+                                    k += 1;
+                                } while ((k < 3) && (_case[k, j] == 0));
+                                if (liberte != i)
+                                {
+                                    _case[liberte, j] = _case[i, j];
+                                    _case[i, j] = 0;
+                                    changement = true;
+                                }
                             }
                         }
                     }
@@ -113,11 +125,22 @@ namespace c2048
                         // pour chaque colonne
                         for (int i = 1; i < 4; i += 1)
                         {
-                            if ((_case[i - 1, j] == 0) && (_case[i, j] != 0))
+                            if (_case[i, j] != 0)
                             {
-                                _case[i - 1, j] = _case[i, j];
-                                _case[i, j] = 0;
-                                changement = true;
+                                // avancer tant que c'est possible
+                                int k = i;
+                                int liberte = i;
+                                do
+                                {
+                                    if (_case[k - 1, j] == 0) { liberte = k - 1; }
+                                    k -= 1;
+                                } while ((k > 0) && (_case[k, j] == 0));
+                                if (liberte != i)
+                                {
+                                    _case[liberte, j] = _case[i, j];
+                                    _case[i, j] = 0;
+                                    changement = true;
+                                }
                             }
                         }
                     }
@@ -129,11 +152,22 @@ namespace c2048
                         // pour chaque ligne
                         for (int j = 2; j >= 0; j -= 1)
                         {
-                            if ((_case[i, j + 1] == 0) && (_case[i, j] != 0))
+                            if (_case[i, j] != 0)
                             {
-                                _case[i, j + 1] = _case[i, j];
-                                _case[i, j] = 0;
-                                changement = true;
+                                // avancer tant que c'est possible
+                                int k = j;
+                                int liberte = j;
+                                do
+                                {
+                                    if (_case[i, k + 1] == 0) { liberte = k + 1; }
+                                    k += 1;
+                                } while ((k < 3) && (_case[i, k] == 0));
+                                if (liberte != j)
+                                {
+                                    _case[i, liberte] = _case[i, j];
+                                    _case[i, j] = 0;
+                                    changement = true;
+                                }
                             }
                         }
                     }
@@ -145,11 +179,22 @@ namespace c2048
                         // pour chaque ligne
                         for (int j = 1; j < 4; j += 1)
                         {
-                            if ((_case[i, j - 1] == 0) && (_case[i, j] != 0))
+                            if (_case[i, j] != 0)
                             {
-                                _case[i, j - 1] = _case[i, j];
-                                _case[i, j] = 0;
-                                changement = true;
+                                // avancer tant que c'est possible
+                                int k = j;
+                                int liberte = j;
+                                do
+                                {
+                                    if (_case[i, k - 1] == 0) { liberte = k - 1; }
+                                    k -= 1;
+                                } while ((k > 0) && (_case[i, k] == 0));
+                                if (liberte != j)
+                                {
+                                    _case[i, liberte] = _case[i, j];
+                                    _case[i, j] = 0;
+                                    changement = true;
+                                }
                             }
                         }
                     }
@@ -166,7 +211,6 @@ namespace c2048
             if (Bouge(touche))
             {
                 _mouvements += 1;
-                LabelMouvements.Text = _mouvements.ToString();
                 Affiche();
             }
         }
