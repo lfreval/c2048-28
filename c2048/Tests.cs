@@ -8,6 +8,14 @@ namespace c2048
 {
     static class Tests
     {
+        public static int[,] Test2048()
+        {
+            int[,] table = new int[4, 4];
+            table[0, 0] = 1024;
+            table[1, 0] = 1024;
+            return table;
+        }
+
         public static int[,] TestP9()
         {
             int[,] table = new int[4, 4];

@@ -16,7 +16,13 @@ namespace c2048
         private int _score = 0;
 
         private int[,] _case = new int[4, 4];
+        
+        public event EventHandler Fusion2048;
 
+        protected virtual void OnFusion2048(EventArgs e)
+        {
+            Fusion2048?.Invoke(this, e);
+        }
         public enum Sens
         {
             Haut,
@@ -29,6 +35,13 @@ namespace c2048
         public Jeu()
         {
             InitializeComponent();
+            Fusion2048 += new System.EventHandler(Gagnant);
+        }
+
+        private void Gagnant(object sender, EventArgs e)
+        {
+            Affiche();
+            MessageBox.Show("Gagné !");
         }
 
         private void LabelEtat_Click(object sender, EventArgs e)
@@ -58,6 +71,7 @@ namespace c2048
             _case[2, 3] = 4;
             _case[3, 2] = 2; */
             // _case = Tests.TestP9();
+            _case = Tests.Test2048();
             AjouteValeur();
             Affiche();
         }
@@ -67,13 +81,19 @@ namespace c2048
         {
             LabelMouvements.Text = _mouvements.ToString();
             LabelScore.Text = _score.ToString();
+            // bool gagné = false;
             for (int i = 0; i < 4; i += 1)
             {
                 for (int j = 0; j < 4; j += 1)
-                { 
+                {
                     Affiche(i, j);
+                  /*  if (_case[i, j] == 2048)
+                    {
+                        gagné = true;
+                    }*/
                 }
             }
+            // if (gagné) { MessageBox.Show("you win!"); }
         }
 
         private void AfficheTest()
@@ -151,6 +171,10 @@ namespace c2048
                                     }
                                     _case[i, j] = 0;
                                     changement = true;
+                                    if (_case[liberte, j] == 2048 && fusion[liberte, j])
+                                    {
+                                        OnFusion2048(new EventArgs());
+                                    }
                                 }
                             }
                         }
@@ -197,6 +221,10 @@ namespace c2048
                                     }
                                     _case[i, j] = 0;
                                     changement = true;
+                                    if (_case[liberte, j] == 2048 && fusion[liberte, j])
+                                    {
+                                        OnFusion2048(new EventArgs());
+                                    }
                                 }
                             }
                         }
@@ -243,6 +271,10 @@ namespace c2048
                                     }
                                     _case[i, j] = 0;
                                     changement = true;
+                                    if (_case[i, liberte] == 2048 && fusion[i, liberte])
+                                    {
+                                        OnFusion2048(new EventArgs());
+                                    }
                                 }
                             }
                         }
@@ -289,6 +321,10 @@ namespace c2048
                                     }
                                     _case[i, j] = 0;
                                     changement = true;
+                                    if (_case[i, liberte] == 2048 && fusion[i, liberte])
+                                    {
+                                        OnFusion2048(new EventArgs());
+                                    }
                                 }
                             }
                         }
