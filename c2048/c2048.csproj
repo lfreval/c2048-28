@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bot_robot_icon_181895.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apropos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apropos.Designer.cs">
+      <DependentUpon>Apropos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +74,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests.cs" />
+    <EmbeddedResource Include="Apropos.resx">
+      <DependentUpon>Apropos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Jeu.resx">
       <DependentUpon>Jeu.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bot_robot_icon_181895.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

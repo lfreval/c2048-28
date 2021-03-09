@@ -162,5 +162,17 @@ namespace c2048
         {
             e.Cancel = MessageBox.Show(String.Format("Fermeture de l'application pour {0}. Voulez-vous {1} ?", e.CloseReason, "quitter"), "Fermeture", MessageBoxButtons.YesNo) == DialogResult.No;
         }
+
+        private void àproposDe2048ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var monApropos = new Apropos();
+            monApropos.StartPosition = FormStartPosition.CenterParent;
+            monApropos.ShowDialog();
+        }
+
+        private void Jeu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

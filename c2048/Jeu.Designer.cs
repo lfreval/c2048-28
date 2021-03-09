@@ -29,10 +29,14 @@ namespace c2048
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jeu));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LabelEtat = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afficherLaideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.àproposDe2048ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Grille = new System.Windows.Forms.TableLayoutPanel();
             this.Case33 = new System.Windows.Forms.Label();
             this.Case23 = new System.Windows.Forms.Label();
@@ -82,19 +86,42 @@ namespace c2048
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nouveauToolStripMenuItem});
+            this.nouveauToolStripMenuItem,
+            this.aideToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(401, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(401, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nouveauToolStripMenuItem
             // 
             this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(132, 40);
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(132, 36);
             this.nouveauToolStripMenuItem.Text = "&Nouveau";
             this.nouveauToolStripMenuItem.Click += new System.EventHandler(this.nouveauToolStripMenuItem_Click);
+            // 
+            // aideToolStripMenuItem
+            // 
+            this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.afficherLaideToolStripMenuItem,
+            this.àproposDe2048ToolStripMenuItem});
+            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(83, 36);
+            this.aideToolStripMenuItem.Text = "&Aide";
+            // 
+            // afficherLaideToolStripMenuItem
+            // 
+            this.afficherLaideToolStripMenuItem.Name = "afficherLaideToolStripMenuItem";
+            this.afficherLaideToolStripMenuItem.Size = new System.Drawing.Size(338, 44);
+            this.afficherLaideToolStripMenuItem.Text = "A&fficher l\'aide";
+            // 
+            // àproposDe2048ToolStripMenuItem
+            // 
+            this.àproposDe2048ToolStripMenuItem.Name = "àproposDe2048ToolStripMenuItem";
+            this.àproposDe2048ToolStripMenuItem.Size = new System.Drawing.Size(338, 44);
+            this.àproposDe2048ToolStripMenuItem.Text = "À &propos de 2048";
+            this.àproposDe2048ToolStripMenuItem.Click += new System.EventHandler(this.àproposDe2048ToolStripMenuItem_Click);
             // 
             // Grille
             // 
@@ -368,12 +395,14 @@ namespace c2048
             this.Controls.Add(this.Grille);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(350, 430);
             this.Name = "Jeu";
             this.Text = "2048";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Jeu_FormClosing);
+            this.Load += new System.EventHandler(this.Jeu_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Jeu_KeyDown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -412,6 +441,9 @@ namespace c2048
         private System.Windows.Forms.Label LabelScore;
         private System.Windows.Forms.Label LabelMouvements;
         private System.Windows.Forms.Label TexteMouvements;
+        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem afficherLaideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem àproposDe2048ToolStripMenuItem;
     }
 }
 
